@@ -22,11 +22,19 @@ const ProfileDashboard: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <UserProfileCard {...userData} />
+      <div className="bg-white rounded-md shadow-md p-6 mb-6">
+        <UserProfileCard {...userData} />
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        <MyGraphsSection recentlyMadeGraphs={recentlyMadeGraphs} />
-        <FavoritePapersSection favoritePapers={favoritePapers} paperCollections={paperCollections} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-white rounded-md shadow-md p-6">
+          <h2 className="text-xl font-semibold mb-4">Recently Made Graphs</h2>
+          <MyGraphsSection recentlyMadeGraphs={recentlyMadeGraphs} />
+        </div>
+        <div className="bg-white rounded-md shadow-md p-6">
+          <h2 className="text-xl font-semibold mb-4">Favorite Papers</h2>
+          <FavoritePapersSection favoritePapers={favoritePapers} paperCollections={paperCollections} />
+        </div>
       </div>
     </div>
   );
