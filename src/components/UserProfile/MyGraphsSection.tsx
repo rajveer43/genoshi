@@ -1,5 +1,6 @@
 // src/components/UserProfile/MyGraphsSection.tsx
 import React from 'react';
+import './MyGraphsSection.css';
 
 interface MyGraphsSectionProps {
   recentlyMadeGraphs: string[]; // assuming an array of graph names or IDs
