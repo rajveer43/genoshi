@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import PricingCard from '../../../src/pricing/PricingCard';
 import SelectedPlanCard from '../../../src/pricing/SelectedPlanCard';
+import './PricingPage.css';
 const PricingPage: React.FC = () => {
   // Mock data, replace with actual data from your application or API
   const pricingPlans = [
@@ -17,7 +18,7 @@ const PricingPage: React.FC = () => {
     },
     {
       planName: 'Enterprise Plan',
-      price: 'Contact for price',
+      price: '20',
       features: ['Unlimited graphs', 'Ability to upload custom PDFs', '24/7 phone + email support'],
     },
   ];
@@ -25,17 +26,21 @@ const PricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState(pricingPlans[0]);
 
   return (
+    <div>
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {pricingPlans.map((plan, index) => (
-          <PricingCard key={index} {...plan} />
+          <div key={index} className="pricing-card">
+          <PricingCard {...plan} />
+          </div>
         ))}
       </div>
-
-      <div className="mt-6">
-        <SelectedPlanCard selectedPlan={selectedPlan} />
-      </div>
     </div>
+    <div className="selected-plan mt-6">
+      <SelectedPlanCard selectedPlan={selectedPlan} />
+    </div>
+    </div>
+  
   );
 };
 

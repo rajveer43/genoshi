@@ -1,6 +1,7 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,25 +11,25 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white relative">
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary -z-1 rounded-b-full"></div>
+    <nav className="navbar-container bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white relative">
+      <div className="background-shape absolute top-0 left-0 right-0 bottom-0 bg-primary -z-1 rounded-b-full"></div>
 
-      <div className="container mx-auto flex items-center justify-between relative">
-        <div className="flex items-center">
+      <div className="navbar-content container mx-auto flex items-center justify-between relative">
+        <div className="logo-container flex items-center">
           <Link to="/" className="flex items-center">
             <img src="/path/to/genoshi-logo.png" alt="Genoshi Logo" className="h-8" />
-            <span className="ml-2 text-lg font-semibold">Genoshi.io</span>
+            <span className="logo-text ml-2 text-lg font-semibold">Genoshi.io</span>
           </Link>
         </div>
 
         {/* Hamburger menu for smaller screens */}
-        <div className="lg:hidden">
+        <div className="mobile-menu lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none focus:border-none"
+            className="menu-button text-white focus:outline-none focus:border-none"
           >
             <svg
-              className="w-6 h-6"
+              className="menu-icon w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
 
         {/* Navigation links */}
         <ul
-          className={`lg:flex space-x-4 ${menuOpen ? 'block' : 'hidden'}`}
+          className={`nav-links lg:flex space-x-4 ${menuOpen ? 'block' : 'hidden'}`}
         >
           <li>
             <Link to="/">Home</Link>

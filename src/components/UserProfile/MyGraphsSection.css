@@ -1,0 +1,52 @@
+/* src/styles/MyGraphsSection.css */
+.my-graphs-section {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .my-graphs-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .my-graphs-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .my-graphs-list-item {
+    color: #3498db;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-graph-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .share-graphs-button {
+    background-color: #ddd;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

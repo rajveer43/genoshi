@@ -1,5 +1,6 @@
 // src/components/UserProfile/UserProfileCard.tsx
 import React from 'react';
+import './UserProfileCard.css'
 
 interface UserProfileCardProps {
   name: string;
@@ -18,18 +19,18 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({
   subscriptionDetails,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-md shadow-md">
+    <div className="user-profile-card bg-white p-4 rounded-md shadow-md">
       <div className="flex items-center">
         <img src={profilePhoto} alt="Profile" className="w-12 h-12 rounded-full mr-4" />
-        <div>
-          <h2 className="text-xl font-semibold">{name}</h2>
-          <p className="text-gray-600">{email}</p>
+        <div className="user-info">
+          <h2 className="user-name text-xl font-semibold">{name}</h2>
+          <p className="user-email text-gray-600">{email}</p>
         </div>
       </div>
 
-      <div className="mt-6">
-        <h3 className="text-lg font-semibold">Subscription Details</h3>
-        <p className="text-gray-600">
+      <div className="subscription-details mt-6">
+        <h3 className="subscription-title text-lg font-semibold">Subscription Details</h3>
+        <p className="subscription-info text-gray-600">
           Type: {subscriptionDetails.type} (Expires on {subscriptionDetails.expirationDate})
         </p>
       </div>

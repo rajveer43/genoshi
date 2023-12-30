@@ -32,7 +32,7 @@ export const profileDashboardData = {
     },
     {
       planName: 'Enterprise Plan',
-      price: 'Contact for price',
+      price: '20',
       features: ['Unlimited graphs', 'Ability to upload custom PDFs', '24/7 phone + email support'],
     },
   ];

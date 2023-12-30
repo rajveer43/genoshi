@@ -13,7 +13,7 @@ const FavoritePapersSection: React.FC<FavoritePapersSectionProps> = ({
   paperCollections,
 }) => {
   return (
-    <div className="bg-white p-4 mt-6 rounded-md shadow-md">
+    <div className="favorite-papers-section bg-white p-4 mt-6 rounded-md shadow-md">
       <h2 className="text-xl font-semibold mb-4">Favorite Papers</h2>
 
       {favoritePapers.length === 0 ? (
